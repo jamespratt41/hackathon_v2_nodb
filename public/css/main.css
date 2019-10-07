@@ -1,51 +1,57 @@
-body {
-  width: 90%;
-  text-align: center;
-  margin: 0 auto;
-  background-color: aqua; }
-
 .hidden {
   display: none; }
+
+p {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #595654; }
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #595654; }
 
 #header {
   background: #f2f2f2;
   color: rgba(255, 255, 255, 0.75);
   height: 6.25em;
   left: 0;
+  padding: 20px 0 20px 0;
   line-height: 4.25em;
   position: fixed;
   text-align: right;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 #header .logo {
-  display: inline-block;
-  height: inherit;
-  left: 1.25em;
-  margin: 10px;
-  padding: 0;
-  position: absolute; }
+  margin: .25em 0;
+  align-self: left;
+  height: inherit; }
 
 #header nav a {
   transition: color 0.2s ease-in-out;
   display: inline-block;
-  padding: 0 0.75em;
+  padding: 0 1em;
   color: inherit;
   text-decoration: none; }
 
 #mainNav button {
-  background: url(../public/images/burger.svg) center no-repeat;
-  width: 30px;
-  height: 30px;
+  background: url(../images/burger.svg) center no-repeat;
+  width: 40px;
+  height: 40px;
   border: 0px;
   transition: all 400ms ease;
-  margin-left: auto; }
+  margin-left: auto;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-top: 20px; }
 
 #mainNav button.expanded {
   -webkit-transfrom: rotate(90deg);
   -ms-transfrom: rotate(90deg);
   transform: rotate(90deg);
-  background: url(../public/images/burgerActive.svg) center no-repeat;
+  background: url(../images/burgerActive.svg) center no-repeat;
   width: 30px;
   height: 30px; }
 
@@ -74,10 +80,10 @@ body {
 #burgerCon.slideToggle {
   display: block; }
 
-#bannerImage {
+#bannerImage img {
   width: 100%;
-  height: 400px;
-  background-color: blue; }
+  height: 600px;
+  margin-bottom: 50px; }
 
 #shopNow {
   background-color: black;
@@ -100,9 +106,8 @@ body {
   text-align: center; }
 
 .square1Image, .square2Image, .square3Image {
-  background-color: green;
   width: 100%;
-  height: 300px; }
+  height: 500px; }
 
 .square1Text, .square2Text, .square3Text {
   display: flex;
@@ -130,12 +135,44 @@ body {
     flex-direction: row; }
 
   .square1Image, .square2Image, .square3Image {
-    background-color: green;
     width: 50%;
-    height: 300px; }
+    height: 500px; }
 
   .square1Text, .square2Text, .square3Text {
     width: 50%;
-    height: 300px; } }
+    height: 500px; } }
+@media screen and (min-width: 965px) {
+  .nav {
+    display: none; }
+
+  .deskNav {
+    display: contents;
+    display: flex; }
+
+  #desktopNav ul {
+    display: flex;
+    flex-direction: row; }
+
+  #desktopNav ul li a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #595654; }
+
+  .shopNowButton {
+    background: #f1670d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    line-height: 2em;
+    margin-top: 12px; } }
 
 /*# sourceMappingURL=main.css.map */
