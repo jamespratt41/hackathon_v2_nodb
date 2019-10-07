@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/users', (req, res) => {
+app.get;('/users', (req, res) => {
   console.log('at the users route');
 
   // try to get data from data base

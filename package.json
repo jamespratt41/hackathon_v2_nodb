@@ -1,5 +1,5 @@
 {
-  "name": "learningnode",
+  "name": "midterm",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "hbs": "^4.0.5",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "s": "^1.0.0"
   }
 }
