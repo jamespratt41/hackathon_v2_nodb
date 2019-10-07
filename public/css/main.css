@@ -48,8 +48,8 @@ h1, h2, h3 {
   margin-top: 20px; }
 
 #mainNav button.expanded {
-  -webkit-transfrom: rotate(90deg);
-  -ms-transfrom: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   background: url(../images/burgerActive.svg) center no-repeat;
   width: 30px;
@@ -58,7 +58,6 @@ h1, h2, h3 {
 #mainNav li a {
   display: block;
   padding: 10px 0 10px 0;
-  /*trbl*/
   color: #8ea75d;
   text-align: center;
   font-family: 'Averia Serif Libre', cursive;
