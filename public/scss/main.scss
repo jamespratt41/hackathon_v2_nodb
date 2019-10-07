@@ -1,0 +1,241 @@
+body {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.hidden
+{
+    display: none;
+}
+
+#header 
+{
+    background: #f2f2f2;
+    color: rgba(255, 255, 255, 0.75);
+    height: 6.25em;
+    left: 0;
+    line-height: 4.25em;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width: 100%;
+}
+
+#header .logo 
+{
+    display: inline-block;
+    height: inherit;
+    left: 1.25em;
+    margin: 10px;
+    padding: 0;
+    position: absolute;
+}
+
+#header nav a {
+    transition: color 0.2s ease-in-out;
+    display: inline-block;
+    padding: 0 0.75em;
+    color: inherit;
+    text-decoration: none;
+}
+
+// NAV HAMBURGER TEXT
+#mainNav button
+{
+	background: url(../public/images/burger.svg) center no-repeat;
+	width: 30px;
+	height: 30px;
+	border: 0px;
+	transition: all 400ms ease;
+	margin-left: auto;
+}
+
+#mainNav button.expanded
+{
+	-webkit-transfrom: rotate(90deg);
+	-ms-transfrom: rotate(90deg);
+	transform: rotate(90deg);
+  background: url(../public/images/burgerActive.svg) center no-repeat;
+	width: 30px;
+	height: 30px;
+}
+
+#mainNav li a
+{
+	display: block;
+	padding: 10px 0 10px 0; /*trbl*/
+	color: #8ea75d;
+	text-align: center;
+  font-family: 'Averia Serif Libre', cursive;
+  color: black;
+}
+
+#mainNav li
+{
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child
+{
+	border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:last-child
+{
+	margin-bottom: 10px;
+}
+
+#burgerCon
+{
+	margin-top: 20px;
+	display: none;
+}
+
+#burgerCon.slideToggle
+{
+	display: block;
+}
+
+// -----------BANNER--------------
+
+#bannerImage
+{
+    width: 100%;
+    height: 400px;
+    background-color: blue;
+}
+
+ #shopNow
+{
+    background-color: black;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+// -----------CIRCLES--------------
+
+.circle img
+{
+    border-radius: 100px;
+}
+
+.circle
+{
+    text-align: center;
+}
+
+
+// -----------INFO SQUARES--------------
+
+.content
+{
+    background-color: #f8f8f8;
+}
+
+.square1, .square2, .square3
+{
+    display: block;
+    text-align: center;
+}
+.square1Image, .square2Image, .square3Image
+{
+    background-color: green;
+    width: 100%;
+    height: 300px;
+}
+
+.square1Text, .square2Text, .square3Text
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 640px) {
+
+    #infoCircles
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .circle
+    {
+        flex-direction: row;
+    }
+
+    .square2
+    {
+        display: none;
+    }
+
+    .square2Desktop
+    {
+        display: contents;
+    }
+
+    .square1, .square2Desktop, .square3
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .square1Image, .square2Image, .square3Image
+    {
+        background-color: green;
+        width: 50%;
+        height: 300px;
+    }
+    
+    .square1Text, .square2Text, .square3Text
+    {
+        width: 50%;
+        height: 300px;
+    }
+
+}
+
+
+
+
+// .content 
+// {
+//     order: 1;
+//     width: 50%;
+//     display: block;
+//     background: #FFF;
+//     padding: 8em;
+//     text-align: right;
+//     position: relative;
+// }
+
+// .image 
+// {
+//     order: 2;
+//     width: 50%;
+//     display: block;
+//     margin: 0;
+//     position: relative;
+//     overflow: hidden;
+//     background-color: #ffffff;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+
+// .image img 
+// {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     height: 100%;
+//     width: auto;
+//     display: none;
+// }

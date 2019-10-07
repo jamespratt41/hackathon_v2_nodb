@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<main>
+    <header id="header">
+        <div class="box logo">
+            <img src="../images/logo_housecom.svg" alt="Company Logo" height="100%" width="100%">
+        </div>
+
+        <div class="nav">
+                <nav id="mainNav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <button id="button"></button>
+                <div id="burgerCon">
+                    <ul id="burgerMenu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Support</a></li>                        
+                    </ul>
+                </div>
+            </nav>
+    
+        </div>
+        <div class="hidden deskNav">
+            <img src="../images/logo_housecom.svg" alt="Company logo" class="logo">
+            
+            <nav id="mainNav">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        </div>         
+    </header>
+
+    <section id="bannerImage">
+        <div class="banner">
+            <img src="../images/landing_desktop.jpg" alt="Product Photo" width="100%">
+        </div>
+        <button>Shop Now</button>
+    </section>
+
+
+    {{{ body }}}
+
+    <footer class="footer">
+        <h2 class="hidden">Footer</h2>
+        <div class="footerNavBox">
+            <nav id="footerNav">
+            <h3 class="hidden">Footer Navigation</h3>
+                <ul>
+                <li><a href="home.hbs">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MEMBERSHIPS</a></li>
+                <li><a href="#">SECURITY</a></li>
+                <li><a href="#">TEMPERATURE</a></li>
+                <li><a href="#">SUPPORT</a></li>
+            </ul>
+            </nav>
+        </div>
+
+        <div class="footerFormBox">
+            <form class="footerForm" action="index.html" method="post">
+            <p>Sign Up for our Newsletter</p>
+            <input type="email" placeholder="Email"><button id="footerFormBut" type="submit" name="button">Submit</button>
+            </form>
+        </div>
+    </footer>
+</main>
+</html>
