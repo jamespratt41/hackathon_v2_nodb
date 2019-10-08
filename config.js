@@ -3,7 +3,7 @@ const config = {
     upass: 'root',
     port: 8889, 
     host: 'localhost', 
-    db: 'bizcard'
+    db: 'hackathon'
 }
 
 
