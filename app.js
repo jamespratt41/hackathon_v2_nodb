@@ -4,74 +4,80 @@ const path = require('path');
 const hbs = require('hbs');
 // require the sql conection
 const sql = require('./utils/sql.js')
-
-// heroku assigns a port when it deploys via the process (environment variables - coming )
-// locally this will run @ port 3000; remotely itll run whenever heroku tells it to run 
-// a double pipe (||) means "or"
 const port = process.env.PORT || 3000; 
-
 const app = express();
 
 app.use(express.static('public'));
 
 // tell exprss to use the handlebars engine to render data
-
 app.set('view engine', 'hbs');
 
 // tell express to use tghe views folder to find this template
 app.set('views', __dirname + '/views');
 
-// a forward slash is the home route (same as index.html)
+
 app.get('/', (req, res) => {
-  console.log('Your on the homepage');
-  // res.sendFile(path.join(__dirname + '/views/index.html'));
-  res.render('home', { message : "hi there!!", anothermessage : "hi there you did it again!!"});
-  // this builds localhost:3000/views/index.html
-})
 
-
-app.get;('/users', (req, res) => {
-  console.log('at the users route');
-
-  // try to get data from data base
   sql.getConnection((err, connection) => {
-    // handle errors first
-    if (err) {
-    return console.log(err.message);
-    }
-
-    // it works! go and get the data
-    let query = `SELECT * FROM tbl_card`;
-
-    sql.query(query, (err, rows) => {
-      connection.release();
-  
-      if (err){
-        return console.log(err.message);
+      if(err) {
+          return console.log(err.message);
       }
-  
-      console.log(rows);
+      let query = "SELECT * FROM tbl_home";
 
-      res.render('user', rows[0]);
-    })
+      sql.query(query, (err, rows) => {
+          connection.release();
+          if (err) { return console.log(err.message) }
+
+          rows.forEach(row => {
+              sqlArrImg.push(row.Image);
+              sqlArrHead.push(row.Heading);
+              sqlArrParag.push(row.Paragraph);
+          })
+          
+            res.render('home', {
+                contentOneImg: sqlArrText[0],
+                contentOneHead: sqlArrName[0],
+                contentOneParag: sqlArrRate[0], 
+                contentTwoImg: sqlArrText[1],
+                contentTwoHead: sqlArrName[1],
+                contentTwoParag: sqlArrRate[1],
+                contentThreeImg: sqlArrText[2],
+                contentThreeHead: sqlArrName[2],
+                contentThreeParag: sqlArrRate[2], 
+                contentFourImg: sqlArrText[3],
+                contentFourHead: sqlArrName[3],
+                contentFourParag: sqlArrRate[3],
+                contentFiveImg: sqlArrText[4],
+                contentFiveHead: sqlArrName[4],
+                contentFiveParag: sqlArrRate[4],
+                contentSixImg: sqlArrText[5],
+                contentSixHead: sqlArrName[5],
+                contentSixParag: sqlArrRate[5]
+            });
+
+            console.log(sqlArrImg);
+            console.log(sqlArrHead);
+            console.log(sqlArrParag);
+      })
   })
 })
 
-(function(){
-	"use strict";
+    // this is the hamburger function 
+    (function(){
+      "use strict";
 
-	console.log('fired');
+      console.log('fired');
 
-	var button = document.querySelector("#button");
-	var burgerCon = document.querySelector("#burgerCon");
+      var button = document.querySelector("#button");
+      var burgerCon = document.querySelector("#burgerCon");
 
-	function hamburgerMenu() {
-		burgerCon.classList.toggle("slideToggle");
-		button.classList.toggle("expanded");
-	}
+      function hamburgerMenu() {
+        burgerCon.classList.toggle("slideToggle");
+        button.classList.toggle("expanded");
+      }
 
-	button.addEventListener("click", hamburgerMenu, false);
-});
+      button.addEventListener("click", hamburgerMenu, false);
+    });
 
 
 app.listen(port, () => {
