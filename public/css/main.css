@@ -164,6 +164,8 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #595654; }
+    #desktopNav ul li a button {
+      color: white; }
 
   .shopNowButton {
     background: #f1670d;
@@ -173,5 +175,125 @@ h1, h2, h3 {
     border-radius: 50px;
     line-height: 2em;
     margin-top: 12px; } }
+footer {
+  bottom: 0; }
+
+.footerMain {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: bold 16px;
+  padding: 30px 22px;
+  margin-top: 80px; }
+
+.footerMain .footerLeft,
+.footerMain .footerMiddle,
+.footerMain .footerRight {
+  display: inline-block;
+  vertical-align: top; }
+
+.footerMain .footerLeft {
+  width: 40%; }
+
+.footerMain h3 {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 0; }
+
+.footerMain h3 span {
+  color: #5383d3; }
+
+.footerMain .footerLinks {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0; }
+
+.footerMain .footerLinks a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit; }
+
+.footerMain .copyright {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0; }
+
+.footerMain .footerMiddle {
+  width: 35%; }
+
+.footerMain .footerMiddle i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle; }
+
+.footerMain .footerMiddle i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px; }
+
+.footerMain .footerMiddle p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0; }
+
+.footerMain .footerMiddle p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2; }
+
+.footerMain .footerMiddle p a {
+  color: #5383d3;
+  text-decoration: none; }
+
+.footerMain .footerRight {
+  width: 20%; }
+
+.footerMain .footerAbout {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0; }
+
+.footerMain .footerAbout span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.footerMain {
+  margin-top: 25px; }
+
+@media (max-width: 880px) {
+  .footerMain {
+    font-family: 'Merriweather Sans'; }
+
+  .footerMain .footerLeft,
+  .footerMain .footerMiddle,
+  .footerMain .footerRight {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center; }
+
+  .footerMain .footerMiddle i {
+    margin-left: 0; }
+
+  .main {
+    line-height: normal;
+    font-size: auto; } }
 
 /*# sourceMappingURL=main.css.map */
